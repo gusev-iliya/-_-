@@ -1,0 +1,270 @@
+<html>
+<head>
+  <title>График заболевания</title>
+  <style media="screen">
+    .head{
+      text-align:center;
+    }
+    .img{
+     background:#000;
+    }
+
+    .main-block{
+      /text-align:center;
+      border-radius:10px;
+      background-color:#fff;
+      border-color: #ff6f45;
+      border-width:;
+      border-style: solid;
+      margin-left:5%;
+      margin-right:5%;
+      /padding:30;
+      margin-bottom:30px;
+
+    }
+
+    .inside{
+      margin:20px;
+      margin-top:15px;
+      padding:0;
+      /background-color:#e48367;
+    }
+    .main-block > h2{
+      margin: 10px;
+      padding: 0;
+    }
+
+    h1{
+      margin-top:0px;
+      padding-top:0px;
+    }
+    .h{
+      margin-bottom:0;
+      margin-top:0px;
+      padding-top:0px;
+
+    }
+
+    .footer{
+     position:fixed;
+     background-color:#eee;
+     bottom:0;
+     left:0;
+     width:100%;
+     height:60px;
+    }
+    .days{
+     float:left;
+     margin-left:10%;
+
+    }
+    .map{
+      position:absolute;
+      width:50px;
+      right: 25%;
+      left: 0;
+      margin: auto;}
+    .articles{
+     position:absolute;
+     width:50px;
+     right: 0;
+     left: 25%;
+     margin: auto;
+    }
+
+    .profile{
+     float:right;
+     margin-right:10%;
+    }
+    .footer > a{
+     margin-top:5px;
+    }
+    body{
+      background-color:#f9f9f9;
+    }
+    .date{
+      margin-bottom:0;
+      font-size:100%;
+      /margin-left:10px;
+      /padding-top:10px;
+      color:#727272;
+    }
+    .count-ill > h{
+     margin-bottom:10px;
+     margin-left:30px;
+     font-size:25px;
+     font-family:	Trebuchet MS;
+    }
+    .count-ill{
+     margin-top:-10px;
+    }
+    .count{
+      margin-left:0;
+      padding-left:0px;
+    }
+
+    .advices{
+     width:100%;
+     text-align:center;
+     background-color:#efefef;
+     margin-top:20px;
+     height:50px;
+     line-height:50px;
+     border-bottom-left-radius:10px;
+     border-bottom-right-radius:10px;
+     font-family:Trebuchet MS;
+     font-size:20px;
+     text-decoration:none;
+
+    }
+    a{
+     text-decoration: none;
+     color:black;
+    }
+    .grafik{
+     margin-left:0px;
+    }
+    .virus{
+     float:right;
+     margin-top:10px;
+     margin-right:-10px;
+    }
+    .advice{
+     padding-top: 15px;
+
+    }
+    .level > h{
+     color:#fff6f3;
+     padding-left:10%;
+     padding-right:10%;
+
+     font-family: "Lucida Console", Monaco, monospace;
+    }
+    .clear{
+     clear:left;
+    }
+    img{
+     float: left;
+
+     margin-left:-10px;
+    }
+    .ill-with-picture{
+     margin-top:30px;
+     margin-bottom:0px;
+    }
+    .ill{
+     float: left
+     margin-bottom:0px;
+    }
+    .level{
+     text-align:center;
+     margin-top:15px;
+     border-radius:4px;
+     height:25px;
+     width:125px;
+     background-color:#ff6f45;
+     height		: 25px;
+    	line-height	: 25px;
+    }
+    .inside > .advice > h3{
+     font-size:100%;
+     font-family: Verdana, Geneva, sans-serif;
+     margin:0;
+     padding:0px;
+    }
+    .line{
+      margin-top:10px;
+      width:100%;
+      height:2px;
+      background-color:#ececec;
+    }
+    .last > div{
+     height:30px;
+     margin-bottom:15px;
+     border-radius:10px;
+     margin-left:5%;
+     margin-right:5%;
+     text-align:center;
+     padding-top:5px;
+     padding-bottom:30px;
+    }
+
+    .last  .low{
+     border:solid;
+     border-color: #3bbf82;
+    }
+    .last  .hi{
+     border:solid;
+     border-color: #ff6f45;
+    }
+    .last  .mid{
+     border:solid;
+     border-color: #ffbe47;
+    }
+    .last > div > h3{
+     margin-top:7px;
+    }
+    .down{
+     height:70px;
+    }
+    h2{
+     text-align:center;
+    }
+
+  </style>
+</head>
+<body>
+<h1 class = 'head'>Прогноз гриппа и Орви</h1>
+<div class= 'main-block'>
+  <div class='inside'>
+  <h1 class='h'>ОРВИ</h1>
+  <h class = 'date'>11 сентября, сегодня</h>
+    <div class='line'></div>
+   <div class='virus'><img src="data:image/png;base64,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" width=130 alt=""></div>
+  <div class='advice'>
+   <h3>Избегайте людных
+   мест и массовых
+   мероприятий</h3>
+  </div>
+
+
+  <div class='level'>
+   <h>Повышенный</h>
+  </div>
+<!--   <div class='ill-with-picture'>
+   <div class = 'img'> <img src="https://cdn.iconscout.com/icon/free/png-256/person-2087092-1759762.png" width="40" height="40"></div>
+   <div class='ill'><h1>Болеющие</h1></div>
+  </div>
+   <div class = 'count-ill'>
+    <h class = 'ill-name1'>Дети: 98</h><br>
+    <h class = 'ill-name'>Взрослые: 54</h>
+   </div> -->
+   <h1>График</h1>
+   <img class='grafik'src="https://deti-moskvy.ru/images/cms/headers/gripp-orz.png" width =100% alt="">
+   <h2>вот он график</h2>
+</div>
+ <a href="/articles">
+<div class = 'advices'>
+    <h>Советы по лечению</h>
+</div></a>
+ </div>
+ <h2>Прошлые недели</h2>
+ <div class='last'>
+  <div class = 'mid'><h class='date1'>1 сентября - 14 сентября</h><h3>Уровень: Средний</h3></div>
+  <div class = 'low'><h class='date1'>16 августа - 30 августа</h><h3>Уровень: Низкий</h3></div>
+  <div class = 'hi'><h class='date1'>1 августа - 15 августа</h><h3>Уровень: Повышенный</h3></div>
+  <div class = 'mid'><h class='date1'>16 июля - 31 июля</h><h3>Уровень: Средний</h3></div>
+  <div class = 'low'><h class='date1'>1 июля - 15 июля</h><h3>Уровень: Низкий</h3></div>
+ </div>
+<div class='footer'>
+ <a href="#" class='days'><img src="https://i.ibb.co/WxVsyrB/date1.png" alt="date" height="50"></a>
+ <a href="/map" class='map'><img src="https://i.ibb.co/1RZHQ1D/map.png" alt="map" height=50></a>
+ <a href="/articles" class='articles'><img src="https://i.ibb.co/HG62Dqr/articles.png" alt="articles" height=50></a>
+ <a href="/profile" class='profile'><img src="https://i.ibb.co/z56x1hr/profile.png" alt="profile" height="50" width=65></a>
+</div>
+
+
+ <div class='down'>
+ </div>
+</body>
+ </html>
