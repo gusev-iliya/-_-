@@ -2,6 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <style media="screen">
+    @media (min-width: 700px){
+    .m{width:70%;
+    margin-left:auto;
+    margin-right:auto;
+    }
+    }
+
       .footer{
    position:fixed;
    background-color:#eee;
@@ -36,6 +43,12 @@
   }
   .footer > a{
    margin-top:5px;
+  }
+  body{
+    background-color: #ffcfcf;
+  }
+  .m{
+    
   }
   input, span, label, textarea {
   font-family: 'Satisfy', cursive;
@@ -191,6 +204,9 @@ textarea.question:invalid ~ input[type="submit"] {
     <title>Профиль</title>
   </head>
   <body>
+    <div class="m">
+
+
     <h1>Профиль</h1>
     <h1>Что здесь должно быть?</h1>
     <h1>Пример формы ввода</h1>
@@ -208,6 +224,7 @@ textarea.question:invalid ~ input[type="submit"] {
    <a href="/map" class='map'><img src="https://i.ibb.co/1RZHQ1D/map.png" alt="map" height=50></a>
    <a href="/articles" class='articles'><img src="https://i.ibb.co/HG62Dqr/articles.png" alt="articles" height=50></a>
    <a href="#" class='profile'><img src="https://i.ibb.co/2vr6PZ5/profile1.png" alt="profile" height="50" width=65></a>
+  </div>
   </div>
   </body>
 </html>
